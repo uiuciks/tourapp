@@ -1,36 +1,99 @@
-:root {
+/* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
+  color-scheme: light;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #ffffff;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-}
+} */
 
-a {
+/* a {
   font-weight: 500;
   color: #646cff;
   text-decoration: inherit;
 }
 a:hover {
   color: #535bf2;
+} */
+
+:root{
+  --primary:#152C5B;
+  --secondary:#3252DF;
+  --white:#ffffff;
+  --gray1:#E5E5E5;
+  --gray2:#5e5d5d;
 }
 
-body {
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+.flexCenter{
+  display: flex;
+  row-gap: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.paddings{
+  padding:1.5rem;
+}
+
+.innerWidth{
+  width: 100%;
+}
+
+.flexStart{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.button{
+  font-weight: 500;
+  padding: 0.6rem 1.4rem;
+  color: var(--white);
+  background: var(--secondary);
+  border: 1px solid #3252DF;
+  border-radius: 4px;
+  box-shadow: 0px 8px 15px rgba(50, 82, 223, 0.3);
+  transition: all 300ms ease-in;
+}
+
+.button:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+a{
+  text-decoration: none;
+  text-transform: capitalize;
+  color: var(--primary);
+}
+
+a:hover{
+  color: var(--secondary);
+}
+
+/* body {
   margin: 0;
   display: flex;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-}
-
+} */
+/* 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
@@ -65,5 +128,24 @@ button:focus-visible {
   }
   button {
     background-color: #f9f9f9;
+  }
+} */
+
+@media (min-width:1536px){
+  .innerWidth{
+    max-width: 1280px;
+    margin: auto;
+  }
+}
+
+@media (min-width:640px){
+  .paddings{
+    padding: 4rem;
+  }
+}
+
+@media (min-width:1280px), (min-width:768px){
+  .paddings{
+    padding: 2rem;
   }
 }
